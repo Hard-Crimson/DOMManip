@@ -26,4 +26,23 @@ div.style.backgroundColor = 'pink'
     div.appendChild(h1);
     div.appendChild(p1);
 
-container.appendChild(div)
+container.appendChild(div);
+
+
+//btn.addEventListener('click', function (e) {//btn references html element, 'click' is event to call funciton.
+  //  e.target.style.background = 'blue';  //on event, the button turns blue
+ // });
+
+ //Below shows how to attach listeners to group of nodes.
+
+ const buttons = document.querySelectorAll('button') //Selects all 'button' elements
+
+ buttons.forEach((button) => { // => acts as function callout
+    
+    button.addEventListener('click', () => {
+        alert(button.id);
+    });
+
+
+ });
+ 
